@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ham Radio on TheCommsChannel</title>
+    <link>https://www.thecommschannel.com/hamradio/index.html</link>
+    <description>Recent content in Ham Radio on TheCommsChannel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://www.thecommschannel.com/hamradio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Packet Radio &amp; APRS</title>
+      <link>https://www.thecommschannel.com/hamradio/packet_radio/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.thecommschannel.com/hamradio/packet_radio/index.html</guid>
+      <description>What is Packet Radio and APRS? Packet Radio is a digital mode of ham radio communication that allows you to send data, text messages, and email over amateur radio frequencies using the AX.25 protocol. APRS (Automatic Packet Reporting System) combines GPS data with Packet Radio to provide real-time tracking, reporting capabilities, weather, and more for amateur radio operators.
+Packet Radio and APRS Benefits
+Digital Communication: Embrace the world of digital communication over the airwaves.</description>
+    </item>
+  </channel>
+</rss>

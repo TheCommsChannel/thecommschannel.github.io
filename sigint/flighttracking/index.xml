@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aircraft Monitoring on TheCommsChannel</title>
+    <link>https://www.thecommschannel.com/sigint/flighttracking/index.html</link>
+    <description>Recent content in Aircraft Monitoring on TheCommsChannel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Sep 2023 21:02:02 -0400</lastBuildDate><atom:link href="https://www.thecommschannel.com/sigint/flighttracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Changing SDR Serials</title>
+      <link>https://www.thecommschannel.com/sigint/flighttracking/changing_sdr_serials/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.thecommschannel.com/sigint/flighttracking/changing_sdr_serials/index.html</guid>
+      <description>Changing SDR Serials on adsbexchange.com raspberry pi image (and likely other iamges) When using two of the similar model SDRs, such as the 1090 and 978 SDRs made by Airnav Radarbox, they may have the same serial number. This makes it difficult to assign each SDR to the 1090 and 978 services. Follow the steps below to change the serial numbers of the SDRs.
+Stop Services First, stop the services that are potentially using the SDRs</description>
+    </item>
+    <item>
+      <title>Nooelec SAWbird ADSB</title>
+      <link>https://www.thecommschannel.com/sigint/flighttracking/nooelec-sawbird-adsb/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.thecommschannel.com/sigint/flighttracking/nooelec-sawbird-adsb/index.html</guid>
+      <description>NOTE: As an Amazon Associate, I may earn a commission from qualifying purchases made through links on this site (at no cost to you).
+While looking through options for my plane tracking ADS-B and UAT setup, I came across this new product from Nooelec, the SAWbird+ ADS-B. It&amp;rsquo;s a dual-channel Ultra Low Noise Amplifier and SAW Filter for both ADS-B and UAT that claims to provide +34dB of gain for each band.</description>
+    </item>
+    <item>
+      <title>Skywatch</title>
+      <link>https://www.thecommschannel.com/sigint/flighttracking/skywatch/index.html</link>
+      <pubDate>Mon, 04 Sep 2023 09:52:16 -0400</pubDate>
+      <guid>https://www.thecommschannel.com/sigint/flighttracking/skywatch/index.html</guid>
+      <description>SkyWatch Python Script Skywatch is a python script that reads the aircraft.json file from a readsb install and checks it against a list of aircraft you provide in the watchlist.txt file. If there&amp;rsquo;s a match, it sends an alert via telegram. It will also alert on certain squawk codes. This has only been tested using the raspberry pi image from adsbexchange, but it should work on any readsb setup. If using a different image/install then all you need to do is find the code and replace http://adsbexchange.</description>
+    </item>
+  </channel>
+</rss>

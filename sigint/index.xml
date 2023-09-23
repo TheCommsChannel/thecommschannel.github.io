@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SIGINT on TheCommsChannel</title>
+    <link>https://www.thecommschannel.com/sigint/index.html</link>
+    <description>Recent content in SIGINT on TheCommsChannel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Sep 2023 21:02:02 -0400</lastBuildDate><atom:link href="https://www.thecommschannel.com/sigint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aircraft Monitoring</title>
+      <link>https://www.thecommschannel.com/sigint/flighttracking/index.html</link>
+      <pubDate>Wed, 20 Sep 2023 21:02:02 -0400</pubDate>
+      <guid>https://www.thecommschannel.com/sigint/flighttracking/index.html</guid>
+      <description>Explore Aircraft Monitoring Explore the Skies with ADS-B, UAT, ACARS, and VDL2
+Whether you&amp;rsquo;re an aviation enthusiast, a professional in the industry, or simply curious about the aircraft in our skies, our website and YouTube channel are your gateway to learning how to receive .
+What is Aircraft Monitoring?
+Aircraft Monitoring is the practice of tracking and collecting data from aircraft using advanced technologies like ADS-B (Automatic Dependent Surveillance–Broadcast), UAT (Universal Access Transceiver), ACARS (Aircraft Communications Addressing and Reporting System), and VDL2 (VHF Data Link Mode 2).</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Packet Radio &amp; APRS on TheCommsChannel</title>
+    <link>https://www.thecommschannel.com/hamradio/packet_radio/index.html</link>
+    <description>Recent content in Packet Radio &amp; APRS on TheCommsChannel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://www.thecommschannel.com/hamradio/packet_radio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building your own Digipeater with Le Potato or Raspberry Pi</title>
+      <link>https://www.thecommschannel.com/hamradio/packet_radio/building_digipeater/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.thecommschannel.com/hamradio/packet_radio/building_digipeater/index.html</guid>
+      <description>NOTE: As an Amazon Associate, I may earn a commission from qualifying purchases made through links on this site (at no cost to you).
+This is a set of instructions to follow to build your own digipeater using the Libre Computer &amp;ldquo;Le Potato&amp;rdquo; device that is similar to a Raspberry Pi. This section is the follow along for video number one of the series.
+Prep You will need a few things in preperation (Including Links to more specific items):</description>
+    </item>
+    <item>
+      <title>Kenwood TH D72 Digipeater Configuration</title>
+      <link>https://www.thecommschannel.com/hamradio/packet_radio/kenwood_th-d72_digipeater_configuration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.thecommschannel.com/hamradio/packet_radio/kenwood_th-d72_digipeater_configuration/index.html</guid>
+      <description>Configuring the digipeater on the Kenwood TH-D72 I jumped on a great find at the last Ham Fest I went to. After my surprise of there being two of the hard to find Kenwood TH-D74s at the ham fest, I was surprised yet again to see that someone was selling a Kenwood TH-D72. So I picked that up as soon as I saw it and completed my collection of Kenwood handhelds with built-in TNCs.</description>
+    </item>
+  </channel>
+</rss>
