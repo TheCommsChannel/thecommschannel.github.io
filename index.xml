@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TheCommsChannel</title>
+    <title>TC² on TheCommsChannel</title>
     <link>https://www.thecommschannel.com/index.html</link>
-    <description>Recent content on TheCommsChannel</description>
+    <description>Recent content in TC² on TheCommsChannel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Sep 2023 21:02:02 -0400</lastBuildDate><atom:link href="https://www.thecommschannel.com/index.xml" rel="self" type="application/rss+xml" />
