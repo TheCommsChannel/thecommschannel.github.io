@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0H3N54FY5L"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-0H3N54FY5L', { 'anonymize_ip': false });
+}
+</script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.118.2">
     <meta name="generator" content="Relearn 5.21.0+tip">
     <meta name="description" content="">
     <title>Nooelec SAWbird ADSB :: TheCommsChannel</title>
-    <link href="/images/favicon.png?1695655468" rel="icon" type="image/png">
+    <link href="/images/favicon.png?1695685556" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1695655468" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1695655468" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1695655468" rel="stylesheet">
-    <link href="/css/auto-complete.css?1695655468" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1695655468" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1695655468" rel="stylesheet">
-    <link href="/css/fonts.css?1695655468" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1695655468" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1695655468" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1695655468" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1695655468" rel="stylesheet">
-    <link href="/css/print.css?1695655468" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1695655468" rel="stylesheet">
-    <script src="/js/url.js?1695655468"></script>
-    <script src="/js/variant.js?1695655468"></script>
+    <link href="/css/fontawesome-all.min.css?1695685556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1695685556" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1695685556" rel="stylesheet">
+    <link href="/css/auto-complete.css?1695685556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1695685556" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1695685556" rel="stylesheet">
+    <link href="/css/fonts.css?1695685556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1695685556" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1695685556" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1695685556" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1695685556" rel="stylesheet">
+    <link href="/css/print.css?1695685556" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1695685556" rel="stylesheet">
+    <script src="/js/url.js?1695685556"></script>
+    <script src="/js/variant.js?1695685556"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -104,6 +116,7 @@
       <div id="main-overlay"></div>
       <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
+
           <article class="default">
             <header class="headline">
             </header>
@@ -127,23 +140,23 @@
 <p>To test the difference the LNA makes, the easiest way to see the results is to go to the Graphs1090 page and review the graphs. You&rsquo;ll actually clearly see results in most of the graphs, including the CPU-related ones.</p>
 <p>Since I&rsquo;ve already been testing the device for a while, I decided to unplug it and hook the antennas directly to the SDRs. That was late afternoon on Friday, and it&rsquo;s now Saturday morning after plugging it back in, so let&rsquo;s have a look at the difference.</p>
 <h5 id="ads-b-message-rate">ADS-B Message Rate</h5>
-<p><a href="#image-f32b2770569e08a04620e69994d22e12" class="lightbox-link"><img src="/images/adsb_msg_rate.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-f32b2770569e08a04620e69994d22e12"><img src="/images/adsb_msg_rate.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-062f707fb55376fea731181ef1ee5446" class="lightbox-link"><img src="/images/adsb_msg_rate.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-062f707fb55376fea731181ef1ee5446"><img src="/images/adsb_msg_rate.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <p>As we look at the first graph on the Graphs1090 page, we can clearly see when the LNA was disconnected on Friday with the sharp drop of Messages Received and Positions. After it was reconnected on Saturday, we can see the sharp jump. It&rsquo;s not quite at the level it was on Friday with it connected, but that is due to there being less air traffic on Saturdays.</p>
 <h5 id="ads-b-range">ADS-B Range</h5>
-<p><a href="#image-183a2f55bc2ada86d78982126b9bea79" class="lightbox-link"><img src="/images/dump1090-localhost-range-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-183a2f55bc2ada86d78982126b9bea79"><img src="/images/dump1090-localhost-range-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-41a33b2dbfaaf830382cf619519ad0b0" class="lightbox-link"><img src="/images/dump1090-localhost-range-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-41a33b2dbfaaf830382cf619519ad0b0"><img src="/images/dump1090-localhost-range-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <p>Looking at the range graph, we can also see an increase here as well, with the max range around 140-150 miles with no LNA and jumping up to around 210 miles with the LNA connected.</p>
 <h5 id="ads-b-signal-level">ADS-B Signal Level</h5>
-<p><a href="#image-5450461760af53afe6f4b064b81f7737" class="lightbox-link"><img src="/images/dump1090-localhost-signal-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-5450461760af53afe6f4b064b81f7737"><img src="/images/dump1090-localhost-signal-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-f64c3d396534ca93479ae6b9b455da4d" class="lightbox-link"><img src="/images/dump1090-localhost-signal-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-f64c3d396534ca93479ae6b9b455da4d"><img src="/images/dump1090-localhost-signal-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <p>Looking at this graph, you can also clearly see a significant improvement with the LNA connected. You may also notice in this graph that the Peak Level line is a straight line with the LNA connected, whereas it&rsquo;s more jagged with it disconnected. This is due to the signal level literally being off the charts, as this graph does not go above 0dB. I was not able to find a way to change this to show above 0dB, unfortunately.</p>
 <h5 id="remaining-graphs">Remaining graphs</h5>
 <p>Looking through some of the remaining graphs, we can also clearly see the differences there as well. Including the CPU usage graph which confirms that more data is being processed by the system.</p>
-<p><a href="#image-d667b05b1f41092b2e295574d8a33fd7" class="lightbox-link"><img src="/images/dump1090-localhost-aircraft-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-d667b05b1f41092b2e295574d8a33fd7"><img src="/images/dump1090-localhost-aircraft-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
-<p><a href="#image-fe2e434d3a009a81d2db11cb30237ca0" class="lightbox-link"><img src="/images/dump1090-localhost-cpu-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-fe2e434d3a009a81d2db11cb30237ca0"><img src="/images/dump1090-localhost-cpu-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-9c3ac7e5f288160cd2e3de4918e4ca88" class="lightbox-link"><img src="/images/dump1090-localhost-aircraft-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-9c3ac7e5f288160cd2e3de4918e4ca88"><img src="/images/dump1090-localhost-aircraft-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-b9411c6143f3e2378a8fbab6a2b4f64e" class="lightbox-link"><img src="/images/dump1090-localhost-cpu-24h.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-b9411c6143f3e2378a8fbab6a2b4f64e"><img src="/images/dump1090-localhost-cpu-24h.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <h3 id="closing-thoughts">Closing Thoughts</h3>
 <p>In conclusion, the Nooelec SAWbird+ ADS-B has proven to make a significantly noticeable difference in the performance of my ADS-B and UAT setup for plane tracking. If you have an ADS-B and UAT</p>
 <p>The results shown on the Graphs1090 page clearly show increases in messages received, number of aircraft seen, signal gain, and the range of coverage extended to approximately 210 miles; a notable increase from the 140-150 miles achieved without the LNA. The Nooelec SAWbird+ ADS-B has exceeded expectations, and I would consider it a must-have for any aviation enthusiasts looking to enhance their ADS-B and UAT tracking setup.</p>
@@ -1558,8 +1571,8 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1695655468" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1695655468" defer></script>
-    <script src="/js/theme.js?1695655468" defer></script>
+    <script src="/js/clipboard.min.js?1695685556" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1695685556" defer></script>
+    <script src="/js/theme.js?1695685556" defer></script>
   </body>
 </html>
