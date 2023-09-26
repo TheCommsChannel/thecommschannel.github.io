@@ -19,20 +19,20 @@ if (!doNotTrack) {
     <meta name="generator" content="Relearn 5.21.0+tip">
     <meta name="description" content="">
     <title>DIY Solar Meshtastic Encrypted Comms Device (Part 1) :: TheCommsChannel</title>
-    <link href="/images/favicon.png?1695685556" rel="icon" type="image/png">
+    <link href="/images/favicon.png?1695687953" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1695685556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1695685556" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1695685556" rel="stylesheet">
-    <link href="/css/auto-complete.css?1695685556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1695685556" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1695685556" rel="stylesheet">
-    <link href="/css/fonts.css?1695685556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1695685556" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1695685556" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1695685556" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1695685556" rel="stylesheet">
-    <link href="/css/print.css?1695685556" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1695685556" rel="stylesheet">
-    <script src="/js/url.js?1695685556"></script>
-    <script src="/js/variant.js?1695685556"></script>
+    <link href="/css/fontawesome-all.min.css?1695687953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1695687953" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1695687953" rel="stylesheet">
+    <link href="/css/auto-complete.css?1695687953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1695687953" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1695687953" rel="stylesheet">
+    <link href="/css/fonts.css?1695687953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1695687953" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1695687953" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1695687953" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1695687953" rel="stylesheet">
+    <link href="/css/print.css?1695687953" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1695687953" rel="stylesheet">
+    <script src="/js/url.js?1695687953"></script>
+    <script src="/js/variant.js?1695687953"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -130,7 +130,7 @@ if (!doNotTrack) {
 
 <h2 id="diy-solar-meshtastic-encrypted-comms-device-part-1">DIY Solar Meshtastic Encrypted Comms Device (Part 1)</h2>
 <p>I see a lot of use online of these LoRa devices from LillyGo called T-Beam&rsquo;s for use with Meshtastic and I think they&rsquo;re great for mobile setups like adding to your backpack while hiking or in a vehicle. For fixed location setups, I much prefer something else and that is what we&rsquo;ll be discussing in this post. The device I&rsquo;m talking about is the WisBlock from Rak Wireless. These are small modular boards and as such, they can do a large variety of things depending on what module you use on them. For the Meshtastic use-case, they have a LoRa module you can connect to the device and flash the Meshtastic firmware on. These also have a built-in solar charge controller which make them a great choice for remote fixed locations where there&rsquo;s no power source available.</p>
-<p>Follow along in these series of posts and  accompaning videos it to build your own! This first post will be an into into what Meshtastic is and the LoRa technology it uses.</p>
+<p>Follow along in these series of posts and accompanying videos to build your own! This first post will be an into into what Meshtastic is and the LoRa technology it uses.</p>
 <h3 id="what-is-meshtastic">What is Meshtastic?</h3>
 <p>Meshtastic is an open-source, long-range, and encrypted wireless communication system that uses LoRa (<strong>Lo</strong>ng <strong>Ra</strong>nge) radio devices to enable decentralized, peer-to-peer communication. Here are some key points about Meshtastic:</p>
 <ol>
@@ -138,7 +138,7 @@ if (!doNotTrack) {
 <p><strong>Mesh Networking</strong>: Meshtastic employs a mesh networking approach, where devices communicate with each other in a peer-to-peer fashion. This means that messages can hop through multiple devices in the network to reach their destination, extending the range of communication.</p>
 </li>
 <li>
-<p><strong>Long Range</strong>: One of the standout features of Meshtastic is its long-range communication capability by using LoRa radios. It uses LoRa radios that operate in the unlicensed ISM (Industrial, Scientific, and Medical) bands (typically in the 915 MHz range in the US or 433 MHz range in Europe), and uses a proprietary modulation called Chirp Spread Spectrum (CSS). CSS allows devices to communicate over extended distances by being able to detect signals well benieth the noise floor, often several miles or more, even in challenging terrain.</p>
+<p><strong>Long Range</strong>: One of the standout features of Meshtastic is its long-range communication capability by using LoRa radios. It uses LoRa radios that operate in the unlicensed ISM (Industrial, Scientific, and Medical) bands (typically in the 915 MHz range in the US or 433 MHz range in Europe), and uses a proprietary modulation called Chirp Spread Spectrum (CSS). CSS allows devices to communicate over extended distances by being able to detect signals well beneath the noise floor, often several miles or more, even in challenging terrain.</p>
 </li>
 <li>
 <p><strong>Low Power</strong>: The LoRa devices used by Meshtastic are energy-efficient, making it suitable for battery-powered devices like hiking radios, outdoor tracking devices, or in our case, a fixed off-grid solar powered device. Devices can operate for extended periods on a single set of batteries. In our testing of the WisBlock LoRa devices, we get just under two weeks on a single 18650 battery.</p>
@@ -154,19 +154,19 @@ if (!doNotTrack) {
 </li>
 </ol>
 <h3 id="more-info-on-lora">More info on LoRa:</h3>
-<p>As mentioned earlier, LoRa, which stands for Long Range, is a proprietary radio technology that uses Chirp Spread Spectrum. It&rsquo;s ideal for systems with low power consumption that do not need high data rates. Due to the bandwidth limits of LoRa, you will typically only see text based communications from these systems so sending things like images isn&rsquo;t feasible using this technology. Where LoRa and CSS make up for this is in it&rsquo;s ability to detect signals well beneith the noise floor, thus making it able to communicate further than other radio technologies.</p>
+<p>As mentioned earlier, LoRa, which stands for Long Range, is a proprietary radio technology that uses Chirp Spread Spectrum. It&rsquo;s ideal for systems with low power consumption that do not need high data rates. Due to the bandwidth limits of LoRa, you will typically only see text based communications from these systems so sending things like images isn&rsquo;t feasible using this technology. Where LoRa and CSS make up for this is in its ability to detect signals well beneath the noise floor, thus making it able to communicate further than other radio technologies.</p>
 <h4 id="a-look-at-a-lora-signal">A look at a LoRa signal</h4>
 <p>In the screenshot below, we can see a view of a LoRa signal captured using an SDR and a program called SDR Console. Looking at the waterfall, we can clearly see the Chirps from the Chirp Spread Spectrum pulses used by LoRa. CSS uses a series of up-chirps as a preamble to let the receiving radios know there&rsquo;s an incoming message. This will be followed by two down-chirps for syncing and then a series of different broken up-chirps that represent specific symbols for the sending of data.</p>
-<p><a href="#image-442fa227b659b890ea74855af5e7b1bb" class="lightbox-link"><img src="/images/LoRa-Signal.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-442fa227b659b890ea74855af5e7b1bb"><img src="/images/LoRa-Signal.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-2db456a5253dbdfaf8a666bd3e5db7c0" class="lightbox-link"><img src="/images/LoRa-Signal.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-2db456a5253dbdfaf8a666bd3e5db7c0"><img src="/images/LoRa-Signal.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <p>In this next image, we&rsquo;ll take a zoomed in view into the chirps and highlight the different sections of the signal to show an example of the preamble, sync, and data portions of the signal.</p>
-<p><a href="#image-84b7f10b354541b94bf60d8f84e12bdd" class="lightbox-link"><img src="/images/LoRa-Chirps.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-84b7f10b354541b94bf60d8f84e12bdd"><img src="/images/LoRa-Chirps.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-92ee36167586c9f60521cd090b0bc6da" class="lightbox-link"><img src="/images/LoRa-Chirps.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-92ee36167586c9f60521cd090b0bc6da"><img src="/images/LoRa-Chirps.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <h3 id="why-meshtastic">Why Meshtastic?</h3>
 <p>There are a number of uses for Meshtastic, but here are some key reasons why one might choose to use Meshtastic for off-grid and emergency communications:</p>
 <ol>
 <li>
-<p><strong>Encrypted Communications</strong>: Meshtastic offers AES 256 encryption, which is the same level of encryption used in high-cost encrypted Motorola radios. Meshtastic provides encryption at a much lower cost of entry since Motorola radios often come with a hefty price tag, and additional costs are incurred for encryption key loaders. Meshtastic offers a cost-effective alternative for achieving the same level of privacy as long as voice communications aren&rsquo;t neccesary due to these being text only.</p>
+<p><strong>Encrypted Communications</strong>: Meshtastic offers AES 256 encryption, which is the same level of encryption used in high-cost encrypted Motorola radios. Meshtastic provides encryption at a much lower cost of entry since Motorola radios often come with a hefty price tag, and additional costs are incurred for encryption key loaders. Meshtastic offers a cost-effective alternative for achieving the same level of privacy as long as voice communications aren&rsquo;t necessary due to these being text only.</p>
 </li>
 <li>
 <p><strong>Ease of Use and License-Free Operation</strong>: The LoRa bands that Meshtastic uses are license-free. Unlike ham radios, which require a license to operate legally, Meshtastic can be used without the need for a license. This makes it accessible to individuals who may not want to go through the process of obtaining a ham radio license. Additionally, the Meshtastic app is user-friendly and familiar to anyone who uses a smartphone, requiring minimal learning curve.</p>
@@ -1586,8 +1586,8 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1695685556" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1695685556" defer></script>
-    <script src="/js/theme.js?1695685556" defer></script>
+    <script src="/js/clipboard.min.js?1695687953" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1695687953" defer></script>
+    <script src="/js/theme.js?1695687953" defer></script>
   </body>
 </html>
