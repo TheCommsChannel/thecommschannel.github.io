@@ -18,7 +18,8 @@ if (!doNotTrack) {
     <meta name="generator" content="Hugo 0.118.2">
     <meta name="generator" content="Relearn 5.21.0+tip">
     <meta name="description" content="">
-    <title>Changing SDR Serials :: TheCommsChannel</title>
+    <title>Radio 101 :: TheCommsChannel</title>
+    <link href="/radio101/index.xml" rel="alternate" type="application/rss+xml" title="Radio 101 :: TheCommsChannel">
     <link href="/images/favicon.png?1696800428" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1696800428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1696800428" rel="stylesheet"></noscript>
@@ -50,7 +51,7 @@ if (!doNotTrack) {
       window.variants && variants.init( [ 'relearn-dark' ] );
     </script>
   </head>
-  <body class="mobile-support html" data-url="/sigint/flighttracking/changing_sdr_serials/index.html">
+  <body class="mobile-support html" data-url="/radio101/index.html">
     <div id="body" class="default-animation">
       <div id="body-overlay"></div>
       <nav id="topbar">
@@ -69,14 +70,7 @@ if (!doNotTrack) {
               <div class="topbar-content">
                 <div class="topbar-content-wrapper"><nav class="TableOfContents">
   <ul>
-    <li><a href="#changing-sdr-serials-on-adsbexchangecom-raspberry-pi-image-and-likely-other-iamges">Changing SDR Serials on adsbexchange.com raspberry pi image (and likely other iamges)</a>
-      <ul>
-        <li><a href="#stop-services">Stop Services</a></li>
-        <li><a href="#change-the-1090-sdr-serial">Change the 1090 SDR Serial</a></li>
-        <li><a href="#change-the-978-sdr-serial">Change the 978 SDR Serial</a></li>
-        <li><a href="#starting-services">Starting services</a></li>
-      </ul>
-    </li>
+    <li><a href="#radio-101">Radio 101</a></li>
   </ul>
 </nav>
                 </div>
@@ -85,18 +79,16 @@ if (!doNotTrack) {
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
               itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">The Comms Channel</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/sigint/index.html"><span itemprop="name">SIGINT</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/sigint/flighttracking/index.html"><span itemprop="name">Aircraft Monitoring</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
-              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Changing SDR Serials</span><meta itemprop="position" content="4"></li>
+              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Radio 101</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="/sigint/flighttracking/index.html" title="Aircraft Monitoring (🡐)">
+              <a class="topbar-control" href="/lora/solar-meshtastic-encrypted-comms-device-pt1/index.html" title="DIY Solar Meshtastic Encrypted Comms Device (Part 1) (🡐)">
                 <i class="fa-fw fas fa-chevron-left"></i>
               </a>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="/sigint/flighttracking/nooelec-sawbird-adsb/index.html" title="Nooelec SAWbird ADSB (🡒)">
+              <a class="topbar-control" href="/radio101/radio101-receivers/index.html" title="Receivers (🡒)">
                 <i class="fa-fw fas fa-chevron-right"></i>
               </a>
             </div>
@@ -121,40 +113,15 @@ if (!doNotTrack) {
           <article class="default">
             <header class="headline">
             </header>
-<h1 id="changing-sdr-serials">Changing SDR Serials</h1>
+<h1 id="radio-101">Radio 101</h1>
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#ff0000', 'B0B1OZ22Z');kofiwidget2.draw();</script>
+<h2 id="radio-101">Radio 101</h2>
+<p>These pagest are for a series dedicated to the basics of radio, but from a broader perspective outside of just ham radio. We&rsquo;ve noticed a common theme online where people are wanting to learn more about radio, but much of the info is very ham radio focused. While ham radio is great, it’s not the only option and there may be a better option for your needs, so we&rsquo;ve decided to create a series that delves into a broader spectrum of radio options.</p>
+<p>Maybe you’re looking for long-distance communication over hundreds or thousands of miles, in which case ham radio might be your ideal choice. Or maybe privacy and off-grid encrypted communication are your priorities, in which case Meshtastic might be the best fit for you. Maybe you’re not interested in transmitting at all and simply want to monitor radio communications around you. If that&rsquo;s the case, options like a scanner, SDR (Software-Defined Radio), or a communications receiver may be the way to go. Or you can even monitor communications world wide with a shortwave or HF radio. Whatever your situation may be, chances are this series will provide you the info you need to make an educated decision.</p>
+<p>My journey into radio began at a young age, starting with a police scanner that used crystals for specific frequencies that had crystals for the local airport, police, and fire. Shortly thereafter, I became interested in shortwave radio and listening to signals across the globe. This eventually got me interested in Ham Radio and got my license around the age of 13. Then I branched out from that to explore other aspects of radio, including tracking aircraft with ADS-B using one of the early models of the Airnav Radarbox, capturing signals from satellites, decoding data signals, and sending data transmissions via packet radio and APRS.</p>
+<p>With this series, our goal is to share the knowledge gained throughout the years and hopefully help you decide what radio system is best for your mission.</p>
+<p>Don&rsquo;t forget to <a href="https://www.youtube.com/@The_Comms_Channel?sub_confirmation=1" target="_blank">subscribe to our YouTube channel</a> for this and more radio related content.</p>
 
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/w_Zr4pEGXCM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<h2 id="changing-sdr-serials-on-adsbexchangecom-raspberry-pi-image-and-likely-other-iamges">Changing SDR Serials on adsbexchange.com raspberry pi image (and likely other iamges)</h2>
-<p>When using two of the similar model SDRs, such as the 1090 and 978 SDRs made by Airnav Radarbox, they may have the same serial number.
-This makes it difficult to assign each SDR to the 1090 and 978 services. Follow the steps below to change the serial numbers of the SDRs.</p>
-<h3 id="stop-services">Stop Services</h3>
-<p>First, stop the services that are potentially using the SDRs</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service readsb stop <span style="color:#f92672">&amp;&amp;</span>  sudo service dump978-fa stop</span></span></code></pre></div><h3 id="change-the-1090-sdr-serial">Change the 1090 SDR Serial</h3>
-<p>First, make sure only one SDR is plugged in and it&rsquo;s the one that will be used for 1090 ES (In the case of the Radar Box SDRs, this is the green one). With that plugged in, run the following command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_eeprom -d <span style="color:#ae81ff">0</span> -p 1090ES -s <span style="color:#ae81ff">00000001</span></span></span></code></pre></div><p>Now unplug the SDR and plug it back in. Run the following command to verify the change:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_test</span></span></code></pre></div><p>You should see the following output at the top</p>
-<blockquote>
-<p>Found 1 device(s):
-0:  Realtek, 1090ES, SN: 00000001</p>
-</blockquote>
-<p>If all went well, unplug the SDR that was just configured.</p>
-<h3 id="change-the-978-sdr-serial">Change the 978 SDR Serial</h3>
-<p>Now, plug in the SDR that will be used for 978 UAT (In the case of the Radar Box SDRs, this is the red one). This should be the only SDR plugged into at this point. With that plugged in, run the following command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_eeprom -d <span style="color:#ae81ff">0</span> -p 978UAT -s <span style="color:#ae81ff">00000002</span></span></span></code></pre></div><p>Now unplug the SDR and plug it back in. Run the following command to verify the change:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_test</span></span></code></pre></div><p>You should see the following output at the top</p>
-<blockquote>
-<p>Found 1 device(s):
-0:  Realtek, 978UAT, SN: 00000002</p>
-</blockquote>
-<p>If all went well, you can plug the other SDR back in so that both are now plugged into the device. The process is now complete and the services can be started back up.</p>
-<h3 id="starting-services">Starting services</h3>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service readsb start <span style="color:#f92672">&amp;&amp;</span>  sudo service dump978-fa start</span></span></code></pre></div>
             <footer class="footline">
 
             </footer>
@@ -1487,14 +1454,14 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
       <div id="content-wrapper" class="highlightable">
         <div id="topics">
           <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/sigint/index.html" class="parent "><input type="checkbox" id="section-3c613d402a754db4ca7319908fa20dc2" aria-controls="subsections-3c613d402a754db4ca7319908fa20dc2" checked><label for="section-3c613d402a754db4ca7319908fa20dc2"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu SIGINT</span></label><a class="padding" href="/sigint/index.html">SIGINT</a><ul id="subsections-3c613d402a754db4ca7319908fa20dc2" class="morespace collapsible-menu">
-          <li data-nav-id="/sigint/flighttracking/index.html" class="parent alwaysopen"><input type="checkbox" id="section-0bdb0e0036e18c0d8f07ac9bae8f327f" aria-controls="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" checked><label for="section-0bdb0e0036e18c0d8f07ac9bae8f327f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Aircraft Monitoring</span></label><a class="padding" href="/sigint/flighttracking/index.html">Aircraft Monitoring</a><ul id="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" class="morespace collapsible-menu">
-          <li data-nav-id="/sigint/flighttracking/changing_sdr_serials/index.html" class="active"><a class="padding" href="/sigint/flighttracking/changing_sdr_serials/index.html">Changing SDR Serials</a></li>
+          <li data-nav-id="/sigint/index.html" class=""><input type="checkbox" id="section-3c613d402a754db4ca7319908fa20dc2" aria-controls="subsections-3c613d402a754db4ca7319908fa20dc2"><label for="section-3c613d402a754db4ca7319908fa20dc2"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu SIGINT</span></label><a class="padding" href="/sigint/index.html">SIGINT</a><ul id="subsections-3c613d402a754db4ca7319908fa20dc2" class="morespace collapsible-menu">
+          <li data-nav-id="/sigint/flighttracking/index.html" class="alwaysopen"><input type="checkbox" id="section-0bdb0e0036e18c0d8f07ac9bae8f327f" aria-controls="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" checked><label for="section-0bdb0e0036e18c0d8f07ac9bae8f327f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Aircraft Monitoring</span></label><a class="padding" href="/sigint/flighttracking/index.html">Aircraft Monitoring</a><ul id="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" class="morespace collapsible-menu">
+          <li data-nav-id="/sigint/flighttracking/changing_sdr_serials/index.html" class=""><a class="padding" href="/sigint/flighttracking/changing_sdr_serials/index.html">Changing SDR Serials</a></li>
           <li data-nav-id="/sigint/flighttracking/nooelec-sawbird-adsb/index.html" class=""><a class="padding" href="/sigint/flighttracking/nooelec-sawbird-adsb/index.html">Nooelec SAWbird ADSB</a></li>
           <li data-nav-id="/sigint/flighttracking/skywatch/index.html" class=""><a class="padding" href="/sigint/flighttracking/skywatch/index.html">Skywatch</a></li></ul></li></ul></li>
           <li data-nav-id="/lora/index.html" class=""><input type="checkbox" id="section-689b2cce35f492f00bd64574e5115248" aria-controls="subsections-689b2cce35f492f00bd64574e5115248"><label for="section-689b2cce35f492f00bd64574e5115248"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu LoRa</span></label><a class="padding" href="/lora/index.html">LoRa</a><ul id="subsections-689b2cce35f492f00bd64574e5115248" class="morespace collapsible-menu">
           <li data-nav-id="/lora/solar-meshtastic-encrypted-comms-device-pt1/index.html" class=""><a class="padding" href="/lora/solar-meshtastic-encrypted-comms-device-pt1/index.html">DIY Solar Meshtastic Encrypted Comms Device (Part 1)</a></li></ul></li>
-          <li data-nav-id="/radio101/index.html" class=""><input type="checkbox" id="section-0b8bd1d3525c30cb645620e1f142753c" aria-controls="subsections-0b8bd1d3525c30cb645620e1f142753c"><label for="section-0b8bd1d3525c30cb645620e1f142753c"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Radio 101</span></label><a class="padding" href="/radio101/index.html">Radio 101</a><ul id="subsections-0b8bd1d3525c30cb645620e1f142753c" class="morespace collapsible-menu">
+          <li data-nav-id="/radio101/index.html" class="active parent "><input type="checkbox" id="section-0b8bd1d3525c30cb645620e1f142753c" aria-controls="subsections-0b8bd1d3525c30cb645620e1f142753c" checked><label for="section-0b8bd1d3525c30cb645620e1f142753c"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Radio 101</span></label><a class="padding" href="/radio101/index.html">Radio 101</a><ul id="subsections-0b8bd1d3525c30cb645620e1f142753c" class="morespace collapsible-menu">
           <li data-nav-id="/radio101/radio101-receivers/index.html" class=""><a class="padding" href="/radio101/radio101-receivers/index.html">Receivers</a></li></ul></li>
           <li data-nav-id="/hamradio/index.html" class=""><input type="checkbox" id="section-5ace9b679e8e7e0c5f4d90ff6c24a207" aria-controls="subsections-5ace9b679e8e7e0c5f4d90ff6c24a207"><label for="section-5ace9b679e8e7e0c5f4d90ff6c24a207"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Ham Radio</span></label><a class="padding" href="/hamradio/index.html">Ham Radio</a><ul id="subsections-5ace9b679e8e7e0c5f4d90ff6c24a207" class="morespace collapsible-menu">
           <li data-nav-id="/hamradio/packet_radio/index.html" class="alwaysopen"><input type="checkbox" id="section-323fc01069f504e93751d3e5e44f0937" aria-controls="subsections-323fc01069f504e93751d3e5e44f0937" checked><label for="section-323fc01069f504e93751d3e5e44f0937"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Packet Radio &amp; APRS</span></label><a class="padding" href="/hamradio/packet_radio/index.html">Packet Radio &amp; APRS</a><ul id="subsections-323fc01069f504e93751d3e5e44f0937" class="morespace collapsible-menu">

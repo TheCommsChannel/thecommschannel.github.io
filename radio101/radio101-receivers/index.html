@@ -18,7 +18,7 @@ if (!doNotTrack) {
     <meta name="generator" content="Hugo 0.118.2">
     <meta name="generator" content="Relearn 5.21.0+tip">
     <meta name="description" content="">
-    <title>Changing SDR Serials :: TheCommsChannel</title>
+    <title>Receivers :: TheCommsChannel</title>
     <link href="/images/favicon.png?1696800428" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1696800428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1696800428" rel="stylesheet"></noscript>
@@ -50,7 +50,7 @@ if (!doNotTrack) {
       window.variants && variants.init( [ 'relearn-dark' ] );
     </script>
   </head>
-  <body class="mobile-support html" data-url="/sigint/flighttracking/changing_sdr_serials/index.html">
+  <body class="mobile-support html" data-url="/radio101/radio101-receivers/index.html">
     <div id="body" class="default-animation">
       <div id="body-overlay"></div>
       <nav id="topbar">
@@ -69,12 +69,18 @@ if (!doNotTrack) {
               <div class="topbar-content">
                 <div class="topbar-content-wrapper"><nav class="TableOfContents">
   <ul>
-    <li><a href="#changing-sdr-serials-on-adsbexchangecom-raspberry-pi-image-and-likely-other-iamges">Changing SDR Serials on adsbexchange.com raspberry pi image (and likely other iamges)</a>
+    <li><a href="#receivers">Receivers</a>
       <ul>
-        <li><a href="#stop-services">Stop Services</a></li>
-        <li><a href="#change-the-1090-sdr-serial">Change the 1090 SDR Serial</a></li>
-        <li><a href="#change-the-978-sdr-serial">Change the 978 SDR Serial</a></li>
-        <li><a href="#starting-services">Starting services</a></li>
+        <li><a href="#terms-used">Terms used</a></li>
+        <li><a href="#scanners">Scanners</a></li>
+        <li><a href="#shortwavehf-radio">Shortwave/HF radio</a></li>
+        <li><a href="#software-defined-radio-sdr">Software Defined Radio (SDR)</a></li>
+        <li><a href="#communications-receivers">Communications Receivers</a></li>
+      </ul>
+    </li>
+    <li><a href="#buying-guide">Buying Guide</a>
+      <ul>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -85,18 +91,17 @@ if (!doNotTrack) {
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
               itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">The Comms Channel</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/sigint/index.html"><span itemprop="name">SIGINT</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/sigint/flighttracking/index.html"><span itemprop="name">Aircraft Monitoring</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
-              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Changing SDR Serials</span><meta itemprop="position" content="4"></li>
+              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/radio101/index.html"><span itemprop="name">Radio 101</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+              itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Receivers</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="/sigint/flighttracking/index.html" title="Aircraft Monitoring (🡐)">
+              <a class="topbar-control" href="/radio101/index.html" title="Radio 101 (🡐)">
                 <i class="fa-fw fas fa-chevron-left"></i>
               </a>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="/sigint/flighttracking/nooelec-sawbird-adsb/index.html" title="Nooelec SAWbird ADSB (🡒)">
+              <a class="topbar-control" href="/hamradio/index.html" title="Ham Radio (🡒)">
                 <i class="fa-fw fas fa-chevron-right"></i>
               </a>
             </div>
@@ -121,40 +126,547 @@ if (!doNotTrack) {
           <article class="default">
             <header class="headline">
             </header>
-<h1 id="changing-sdr-serials">Changing SDR Serials</h1>
+<h1 id="receivers">Receivers</h1>
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#ff0000', 'B0B1OZ22Z');kofiwidget2.draw();</script>
-
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/w_Zr4pEGXCM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<h2 id="changing-sdr-serials-on-adsbexchangecom-raspberry-pi-image-and-likely-other-iamges">Changing SDR Serials on adsbexchange.com raspberry pi image (and likely other iamges)</h2>
-<p>When using two of the similar model SDRs, such as the 1090 and 978 SDRs made by Airnav Radarbox, they may have the same serial number.
-This makes it difficult to assign each SDR to the 1090 and 978 services. Follow the steps below to change the serial numbers of the SDRs.</p>
-<h3 id="stop-services">Stop Services</h3>
-<p>First, stop the services that are potentially using the SDRs</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service readsb stop <span style="color:#f92672">&amp;&amp;</span>  sudo service dump978-fa stop</span></span></code></pre></div><h3 id="change-the-1090-sdr-serial">Change the 1090 SDR Serial</h3>
-<p>First, make sure only one SDR is plugged in and it&rsquo;s the one that will be used for 1090 ES (In the case of the Radar Box SDRs, this is the green one). With that plugged in, run the following command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_eeprom -d <span style="color:#ae81ff">0</span> -p 1090ES -s <span style="color:#ae81ff">00000001</span></span></span></code></pre></div><p>Now unplug the SDR and plug it back in. Run the following command to verify the change:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_test</span></span></code></pre></div><p>You should see the following output at the top</p>
+<h2 id="receivers">Receivers</h2>
+<p>This post will be covering the different types of receiver options available out there that you may run into. We&rsquo;ve used all of these different types of radios over the years and We&rsquo;ll cover their uses and pros and cons of each one. The next post will cover radio you can transmit on, known as transceivers.</p>
+<h3 id="terms-used">Terms used</h3>
+<p>Before we get into it, there are some terms that you may be unfamiliar with if you’re completely new to radio that I want to quickly cover before we continue.</p>
+<h4 id="frequencies">Frequencies</h4>
+<p>Think of radio frequencies as the different channels on your TV or stations on your car radio. When you turn on your TV and change the channel, you&rsquo;re actually tuning in to a specific radio frequency. On your car radio, you can actually see what frequency you’re on. You might have a music station on 92.5 that you like and a news station on 106.5 for example. Most of the radio systems in this video use Megahertz (MHz), but you may see Kilohertz (KHz) or Gigahertz (GHz)</p>
+<p>1000KHz = 1MHz</p>
+<p>1000MHz = 1GHz</p>
+<h4 id="hfvhfuhf">HF/VHF/UHF</h4>
+<p>HF, VHF, and UHF are abbreviations for different frequency bands Each of these bands has its own characteristics and uses for communication purposes. We’ll go more in-depth in a later video.</p>
+<p><strong>HF (High Frequency)</strong>
+<em>3 MHz to 30 MHz</em></p>
+<p>This is a long-distance radio band. It&rsquo;s used for things like talking to people far away via ham radio or listening to international broadcasts from far away countries.</p>
+<p><strong>VHF (Very High Frequency):</strong>
+<em>30 MHz to 300 MHz</em></p>
+<p>This is a medium-distance band. It&rsquo;s used for things like your local FM radio stations, Police, Fire Stations, walkie-talkies, airplanes, and more.</p>
+<p><strong>UHF (Ultra High Frequency):</strong>
+<em>300 MHz to 3 GHz</em></p>
+<p>This is a short-distance band. Police and Fire Stations also use this range in addition to VHF. Things like your cell phone, Wi-Fi, FRS/GMRS radios, and more can also be found in this range.</p>
+<h3 id="scanners">Scanners</h3>
+<p>As mentioned in the intro to this series, I got my start in radio with a scanner. This was just a crystal scanner and I was locked into listening to whatever crystals the radio had in it. Scanners are much more advanced now however with the ability to have thousands of frequencies programmed into them. You may be familiar with the concept of programming frequencies with the radio in your vehicle and saving radio stations you like to listen to while driving. This is similar to what you do with a scanner. </p>
+<p>Scanners are a great entry into radio if you’re not worried about communicating with anyone yet, or you just want to monitor what&rsquo;s going on around you.</p>
+<p>There are many things you can listen into with scanners.</p>
+<ul>
+<li>
+<p>Fire/EMS</p>
+</li>
+<li>
+<p>Police</p>
+</li>
+<li>
+<p>Trains</p>
+</li>
+<li>
+<p>Aircraft</p>
+</li>
+<li>
+<p>Military</p>
+</li>
+<li>
+<p>Ham Radio</p>
+</li>
+<li>
+<p>FRS/GMRS/MURS</p>
+</li>
+<li>
+<p>CB Radio</p>
+</li>
+<li>
+<p>Marine Radio systems</p>
+</li>
+<li>
+<p>News Agencies</p>
+</li>
+<li>
+<p>And more&hellip;</p>
+</li>
+</ul>
+<p>One important thing to note, if Police and Fire/EMS are what you intend to listen to, you may need a higher-end scanner that can receive digital signals as many places have switched to digital. If not, then generally the cheaper analog scanners will do just fine. Even if they’ve not moved to digital, they may be on a trunked system. In which case, a scanner capable of following trunk systems will be needed. You can find this information by visiting <a href="https://www.radioreference.com/db/browse/" target="_blank">radioreference.com</a> and looking up the info for the area you&rsquo;re interested in monitoring.</p>
+<p>You&rsquo;ll also want to check to see if they&rsquo;re using encryption. If so, you&rsquo;re out of luck and won&rsquo;t be able to monitor them.</p>
+<p>This wide range of what you can listen to are what make it a great start into radio before making the leap into getting a radio that you can transmit with. Having a scanner will allow you to listen to various radio services around you to see what&rsquo;s most popular in your area. For example, maybe FRS/GMRS is more popular than CB radio in your area and it would make more sense to get an FRS/GMRS radio.</p>
+<p>Scanners generally don’t cover the lower HF frequencies, but some cover a small portion of it from 25MHz to 30MHz which is where the CB radio and 10 meter ham radio bands are.</p>
+<h4 id="pros--cons">Pros &amp; Cons</h4>
+<p><strong>Pros</strong></p>
+<ul>
+<li>
+<p>Easy to use: Scanners are great for beginners as they’re much easier to use than other radio systems. Some of the higher end ones can be more complex though.</p>
+</li>
+<li>
+<p>Pre-programmed: Some scanners have presets pre-loaded in them for scanning certain services like Police, Fire, Ham Radio, CB Radio, FRS/GMRS, ect. Some of the higher end models can also load all of the frequencies for your area by entering in your zip code</p>
+</li>
+<li>
+<p>Stand-alone. Unlike SDRs, these don’t require a computer to be connected to them for use. Programming the more complex radios via computer is recommended however, but once that is done, it can go back to being a stand-alone device.</p>
+</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>
+<p>Limited frequency range: Scanners are generally limited to a frequency range from 25MHz to 1300MHz. This is where most radio traffic people will be interested in though so this is just a minor con</p>
+</li>
+<li>
+<p>Locked in Modulation: Scanners are locked in to specific modulation depending on the band. You’re generally locked into AM mode for the civilian and military aircraft bands and AM for the CB and 10 Meter ham radio bands. Everything else is locked to FM</p>
+</li>
+</ul>
+<h3 id="shortwavehf-radio">Shortwave/HF radio</h3>
+<p>The next type of radio on the list of receive-only radios are shortwave/HF(High Frequency) radios. These radios cover the lower frequencies from around 1MHz to 30MHz and what’s neat about these frequencies is that signals can bounce off the ionosphere and back down earth. This bouncing of the ionosphere allows signals to travel very long distances, often multiple countries away. Communications on the frequencies above HF, such as those in the VHF (Very High Frequency) and UHF (Ultra High Frequency) ranges are not able to bounce off the ionosphere. Because of this, these frequencies require line-of-sight to be able to communicate and limits the range compared to the HF frequencies.</p>
+<p>There are many things from around the globe that you can listen into on these lower frequencies:</p>
+<ul>
+<li>
+<p>International Broadcasts: Things like news, music, and cultural programs from different countries.</p>
+</li>
+<li>
+<p>Ham Radio: These lower frequencies are popular with Ham Radio operators due to the long distances you can communicate on these bands</p>
+</li>
+<li>
+<p>Aircraft: When aircraft fly over the ocean and get beyond line-of-sight, they will communicate using these HF frequencies</p>
+</li>
+<li>
+<p>Boats/Ships: Vessels out to sea and beyond line-of-sight will also use these lower frequencies for weather reports, ship-to-shore communications, and for distress calls in an emergency to provide their location to the Coast Guard</p>
+</li>
+<li>
+<p>Military: The Coast Guard and United States Air Force also use these HF frequencies heavily.</p>
+</li>
+<li>
+<p>Emergencies: These radios are good for gathering information during emergencies as they’re heavily used by ham radio operators for emergency communications, news broadcasts, and weather broadcasts.</p>
+</li>
+</ul>
+<p>One important thing to note when looking for a shortwave receiver. You’ll usually see options that don’t include SSB (Single Sideband or sometimes just referred to as “sideband”) and only offer AM mode (and sometimes FM). If you’re wanting to listen to more than just the international broadcasts and be able to listen to things like Ham Radio, Ships, and Military, you will want to pick one with SSB capability.</p>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Global Reach: Shortwave radios can receive signals from around the world, making them suitable for international broadcasts and emergency information.</li>
+<li>Portable: Many shortwave radios are portable and battery-operated, making them suitable for outdoor and on-the-go use.</li>
+<li>Affordability: Basic shortwave radios are often more affordable than high-end scanners or SDR setups.</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>Limited Local Reception: Shortwave radios are less effective for local communications and monitoring specific services like Police or Fire/EMS</li>
+<li>Limited Digital Support: They are primarily designed for analog broadcasts and may not handle digital modes well.</li>
+<li>Narrow Frequency Range: Shortwave radios are limited to the shortwave frequency bands and may not cover other frequency ranges.</li>
+</ul>
+<h3 id="software-defined-radio-sdr">Software Defined Radio (SDR)</h3>
+<p>Software Defined Radios (SDRs) have been a great advancement in radio technology, offering an increased level of flexibility and a wide array of applications. This is due to them being software-based systems rather than hardware-based. In conventional hardware-based radio setups, any new capabilities required hardware modifications or additions. With SDRs, new functionalities are enabled through custom software development. This opens up opportunities for a wide range of applications. </p>
+<p>For example, the ADS-B flight tracking setup I did a video on uses SDR’s to receive the data from aircraft for tracking. Another example is receiving digital voice communications like P25, DMR, or DSTAR. There’s even software to pick up signals from weather balloons and track them. The sky is really the limit when it comes to SDRs and the technology has even made it’s way into some traditional radios like scanners and even some ham radios are SDR-based.</p>
+<p>The frequency ranges vary greatly depending on the SDR, but they generally cover VHF and UHF. Some advanced SDR models, like the SDRplay, extend their coverage to include HF frequencies.</p>
+<p>Many SDR programs include what&rsquo;s called a waterfall. This allows you to see the signals you&rsquo;re picking up as well as signals on the surrounding frequencies in real-time. You can also see this feature on higher end ham radios and communications receivers. Having this feature has been a game changer for me and I generally seek out radios that have this feature. </p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>
+<p>Flexibility: Since these are based on software, they’re extremely flexible and have a wide number of applications due to this</p>
+</li>
+<li>
+<p>Cost: SDRs themselves can found relatively cheaply, but since they do require a computer, the cost goes up if you don’t already have a computer and need to purchase one</p>
+</li>
+<li>
+<p>Digital: Digital scanners can be costly, so if you already have a computer, an SDR is the cheapest way to receive digital voice signals like P25, DMR, DSTAR and more.</p>
+</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>
+<p>Can be complex to setup if you’re not well versed in computers</p>
+</li>
+<li>
+<p>They’re not stand-alone devices and need a computer to operate</p>
+</li>
+<li>
+<p>Can be a costly system if a computer needs to purchased</p>
+</li>
+</ul>
+<h3 id="communications-receivers">Communications Receivers</h3>
+<p>Last but not least, we have communications receivers. These devices share similarities with scanners, such as the ability to program frequencies into channels and scan through them. However, communications receivers offer a higher level of capability. Starting with frequency coverage, communications receivers offer a much wider range of frequencies they can tune into compared to scanners. Consider the Icom R8600 for example, which can receive signals from 0.010MHz to 3000MHz. Even the most advanced scanners on the market today typically cover a range of only 25MHz to 1300MHz.</p>
+<p>They also don’t have the modulation limitations that scanners do. Scanners are generally limited to AM and FM and don’t allow you to change what mode you’re in. Communications Receivers on the other hand generally have AM, FM, LSB, USB, CW modes and let you select the mode regardless of what frequency you’re on. One example where this is helpful compared to scanners is the 10 meter ham radio that some scanners can pick up. Much of the communications on this band are in USB mode and scanners would not be able to pick this up.</p>
+<p>Scanners do have an advantage over communications receivers though as they can monitor what are called trunked systems. I won’t go too deep into trunking in this video, but just know that many Police and Fire/EMS agencies use trunked systems, so if monitoring those are your goal, you’ll want to check too see if they’re using trunked systems in your area. If so, you’ll want to get a scanner with trunking capabilities. How to check what is being used in your area will be covered in another video.</p>
+<p>There’s more that I can get into, but there will be a future video covering scanners and communications receivers more in-depth. But to put it simply, scanners are more for scanning a set of frequencies you’re interested in and letting it sit. Communications receivers are more for sitting at the radio and tuning around the bands to explore what’s out there.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Wide Frequency Range: Communications receivers are able to pick up more frequencies than the other radio systems we covered.</li>
+<li>Better Sensitivity: They often have better sensitivity and selectivity compared to scanners, resulting in clearer reception.</li>
+<li>Additional Capabilities: Communications receivers include more modulation options like Single Sideband (SSB).</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>No Pre-Programming: Unlike scanners, communications receivers don&rsquo;t come with pre-programmed channels for specific services.</li>
+<li>Cost: High-quality communications receivers can be very expensive.</li>
+</ul>
+<hr>
+<h2 id="buying-guide">Buying Guide</h2>
+<p>You&rsquo;ve gone through the information in <strong>Radio 101 - Receivers</strong> and you&rsquo;ve decided that a receiver would be a good fit for you to add to your kit. Use the guide below to easily find the police scanner, shortwave radio, SDR, or communications receiver that best meets your needs by looking at the feature matrix charts below for key features for each radio.</p>
 <blockquote>
-<p>Found 1 device(s):
-0:  Realtek, 1090ES, SN: 00000001</p>
+<p><strong>NOTE:</strong> As an Amazon Associate, I may earn a commission from qualifying purchases made through links on this site (at no cost to you).</p>
 </blockquote>
-<p>If all went well, unplug the SDR that was just configured.</p>
-<h3 id="change-the-978-sdr-serial">Change the 978 SDR Serial</h3>
-<p>Now, plug in the SDR that will be used for 978 UAT (In the case of the Radar Box SDRs, this is the red one). This should be the only SDR plugged into at this point. With that plugged in, run the following command:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_eeprom -d <span style="color:#ae81ff">0</span> -p 978UAT -s <span style="color:#ae81ff">00000002</span></span></span></code></pre></div><p>Now unplug the SDR and plug it back in. Run the following command to verify the change:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rtl_test</span></span></code></pre></div><p>You should see the following output at the top</p>
-<blockquote>
-<p>Found 1 device(s):
-0:  Realtek, 978UAT, SN: 00000002</p>
-</blockquote>
-<p>If all went well, you can plug the other SDR back in so that both are now plugged into the device. The process is now complete and the services can be started back up.</p>
-<h3 id="starting-services">Starting services</h3>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service readsb start <span style="color:#f92672">&amp;&amp;</span>  sudo service dump978-fa start</span></span></code></pre></div>
+<h4 id="scanners-1">Scanners</h4>
+<p><strong>Column explanations</strong>:</p>
+<p><strong>Range(MHz) -</strong> This will show the frequency range of the radio. Please note that unlike communications receivers, scanners often have blocks of frequencies left out of the range. Be sure to check that the radio receives the frequencies you&rsquo;re interested in.</p>
+<p><strong>Digital -</strong> This shows the Digital modes the radio as capable of receiving. Please note that some of these radios require an extra purchase to unlock additional digital modes like DMR, NXDN, ect. Check what is in use for your area</p>
+<p><strong>Zip -</strong> This shows scanners that come preloaded with a database of frequencies that allows you to just enter in your Zip code to listen to radio traffic in your area.</p>
+<p><strong>CC/SS -</strong> This shows scanners that have the CloseCall (CC) feature (Uniden Scanners) or the Signal Stalker (SS) feature (Whistler Scanners). These features have the radio alert you when a radio is broadcasting nearby.</p>
+<p><strong>Trunk -</strong> This shows scanners that have trunk-tracking capabilities. This is often used by Police and Fire/EMS services. Check what is used in your area</p>
+<p><strong>Svc -</strong> This shows scanners that come preloaded with service search ranges for things like Police, Fire/EMS, Ham Radio, CB Radio, FRS/GMRS/MURS, and more.</p>
+<p><strong>Rec -</strong> This shows scanners that have the ability to record radio traffic to an SDCard for later review/listening</p>
+<h5 id="portable">Portable</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Model</th>
+<th style="text-align:center">Range(MHz)</th>
+<th style="text-align:center">Digital</th>
+<th style="text-align:center">Zip</th>
+<th style="text-align:center">CC/SS</th>
+<th style="text-align:center">Trunk</th>
+<th style="text-align:center">Svc</th>
+<th style="text-align:center">Rec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3ZNMenQ" target="_blank"><strong>Uniden SDS100</strong></a> <!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-SDS100-Performance-Weak-Signal-Construction/dp/B07DK26FDN?crid=36RT1RUL3J87F&keywords=sds100&qid=1696772535&s=electronics&sprefix=sds100%2Celectronics%2C96&sr=1-1&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&linkCode=li2&tag=tc20f-20&linkId=5760d504fc54e01dceaef79ad2d36425&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07DK26FDN&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li2&o=1&a=B07DK26FDN" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN PV</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/48FaFrs" target="_blank"><strong>Whistler TRX-1</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Whistler-TRX-1-Handheld-Digital-Scanner/dp/B01H3XYNUO?crid=CTLMOKACAFW&keywords=TRX-1&qid=1696775219&s=electronics&sprefix=trx-1%2Celectronics%2C92&sr=1-1&th=1&linkCode=li2&tag=tc20f-20&linkId=137f83afa82d589f1a74ad55599f0c44&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H3XYNUO&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li2&o=1&a=B01H3XYNUO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/46vKnWY" target="_blank"><strong>Uniden BCD325P2</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-BCD325P2-TrunkTracker-Dynamically-Location-Based/dp/B00V91IN62?crid=2TC5FP24506SG&keywords=bcd325p2&qid=1696783379&s=electronics&sprefix=BCD%2Celectronics%2C92&sr=1-1&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&th=1&linkCode=li2&tag=tc20f-20&linkId=f1df44392407c88f8dfc95531c1753e1&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00V91IN62&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li2&o=1&a=B00V91IN62" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-960</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN PV</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/46DbDTd" target="_blank"><strong>Whistler WS1040</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Whistler-WS1040-Handheld-Digital-Scanner/dp/B00IID3OAY?crid=A57VP8W2Z8ZU&keywords=WS1040&qid=1696776257&s=electronics&sprefix=ws1040%2Celectronics%2C99&sr=1-1&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&th=1&linkCode=li2&tag=tc20f-20&linkId=3c93f475ca72c107d49b9f5eab20f064&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00IID3OAY&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li2&o=1&a=B00IID3OAY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/46hwICN" target="_blank"><strong>Uniden BC125AT</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-BC125AT-Alpha-Tagged-channels-Lightweight/dp/B00772MR0K?crid=CH4SIY0R7IOY&keywords=bc125at&qid=1696776618&s=electronics&sprefix=BC125%2Celectronics%2C97&sr=1-1&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&linkCode=li2&tag=tc20f-20&linkId=8d6c496cf8faa19f82dae5e6db72d7fe&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00772MR0K&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li2&o=1&a=B00772MR0K" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-512</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3F8mZ61" target="_blank"><strong>Uniden SR30C</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-SR30C-500-Channel-Technology-Programming/dp/B07S9H8YH3?crid=I1G60E2MM3NQ&keywords=uniden+bearcat+scanner&qid=1696778121&s=electronics&sprefix=Uniden+bea%2Celectronics%2C91&sr=1-4&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&linkCode=li2&tag=tc20f-20&linkId=43edfbaa43adef1e8cd0d5f0464b4545&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07S9H8YH3&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li2&o=1&a=B07S9H8YH3" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-512</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="basemobile">Base/Mobile</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Model</th>
+<th style="text-align:center">Range(MHz)</th>
+<th style="text-align:center">Digital</th>
+<th style="text-align:center">Zip</th>
+<th style="text-align:center">CC/SS</th>
+<th style="text-align:center">Trunk</th>
+<th style="text-align:center">Svc</th>
+<th style="text-align:center">Rec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3ZMFnuw" target="_blank"><strong>Uniden SDS200</strong></a><!-- raw HTML omitted --><a href="https://www.amazon.com/Uniden-SDS200-Incorporates-Technology-Performance/dp/B07NGJGMS1?_encoding=UTF8&pd_rd_w=k8f2M&content-id=amzn1.sym.5f7e0a27-49c0-47d3-80b2-fd9271d863ca%3Aamzn1.symc.e5c80209-769f-4ade-a325-2eaec14b8e0e&pf_rd_p=5f7e0a27-49c0-47d3-80b2-fd9271d863ca&pf_rd_r=HSGSFCWXXDT6BV548DPB&pd_rd_wg=kwUEd&pd_rd_r=c116625a-8ca5-47ea-ad76-3a16369c4ed5&linkCode=li3&tag=tc20f-20&linkId=ca589c402e56e94ec43d6b24ce79eff7&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07NGJGMS1&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B07NGJGMS1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN PV</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3F7w4w0" target="_blank"><strong>Whistler TRX-2</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Whistler-TRX-2-Desktop-Digital-Scanner/dp/B01H3XYJS0?crid=185BXSKYGL4ZM&keywords=TRX-2&qid=1696776875&s=electronics&sprefix=trx-2%2Celectronics%2C80&sr=1-1&linkCode=li3&tag=tc20f-20&linkId=61afc29b8281b045b33991bad063435d&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H3XYJS0&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B01H3XYJS0" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3LMWRkQ" target="_blank"><strong>Uniden HomePatrol-2</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-HomePatrol-2-Touchscreen-TrunkTracker-Emergency/dp/B00JJY6S72?crid=1WHX9EWTQQG7Z&keywords=uniden%2Bhomepatrol-2&qid=1696777011&s=electronics&sprefix=homepa%2Celectronics%2C100&sr=1-1&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&th=1&linkCode=li3&tag=tc20f-20&linkId=3b653c1071d16006c9c482f847f6e0f7&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00JJY6S72&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B00JJY6S72" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-960</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3rxrZy5" target="_blank"><strong>Uniden BCD536HP</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-BCD536HP-HomePatrol-Programming-TrunkTracker/dp/B00HZOW5K2?crid=12H5DDP99LA3C&keywords=uniden%2Bbcd536hp&qid=1696777197&s=electronics&sprefix=uniden%2Bbcd536hp%2Celectronics%2C66&sr=1-1&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&th=1&linkCode=li3&tag=tc20f-20&linkId=bdbbb7f26f59e355fb5988ca0a3b1678&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00HZOW5K2&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B00HZOW5K2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN PV</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/45ohgn8" target="_blank"><strong>Uniden BCD996P2</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-BCD996P2-TrunkTracker-Dynamically-Location-Based/dp/B00UJU5MUE?crid=2RUVD4U5WLN9N&keywords=uniden+bcd996p2&qid=1696777415&s=electronics&sprefix=uniden+bcd996%2Celectronics%2C66&sr=1-1&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&linkCode=li3&tag=tc20f-20&linkId=3cfd2e9e7e0f76015b8ad1797bdd9252&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00UJU5MUE&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B00UJU5MUE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-stream"></i></span><span class="badge-content" style="background-color: blue;">P25 DMR NXDN PV</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/400uFkB" target="_blank"><strong>Uniden BCT15X</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/dp/B002IT1C8U?amp=&crid=1WTJTI9JBY89T&sprefix=bct&th=1&linkCode=li3&tag=tc20f-20&linkId=598c3c565140d2bf497e603ec6790b3c&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002IT1C8U&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B002IT1C8U" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1300</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3S6m0Lx" target="_blank"><strong>Uniden BC365CRS</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Uniden-BC365CRS-Commonly-Aircraft-transmissions/dp/B01C73X4FK?crid=366YQIJ9BR30M&keywords=bc365crs&qid=1696777673&s=electronics&sprefix=bc365crs%2Celectronics%2C84&sr=1-1&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&linkCode=li3&tag=tc20f-20&linkId=ed9d43dad74f36a9107f093a3009ad54&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01C73X4FK&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B01C73X4FK" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-512</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3F6s52D" target="_blank"><strong>Whistler WS1025</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Whistler-WHIWS1025-Desktop-Scanner-Radio/dp/B07CDCY8HZ?crid=1ZH1C7PWRJA52&keywords=WS1025&qid=1696777854&s=electronics&sprefix=ws1025%2Celectronics%2C79&sr=1-2&linkCode=li3&tag=tc20f-20&linkId=65e7fa86dc8e41d41fd2bfbea6eab661&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07CDCY8HZ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B07CDCY8HZ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">29-512</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="shortwavehf-receivers">Shortwave/HF Receivers</h4>
+<p><strong>Column explanations:</strong></p>
+<p><strong>SSB -</strong> This shows receivers that are capable of using Single Side Band modes (USB/LSB). This is needed for listening to Ham Radio, Aircraft, Ships, Military, and more.</p>
+<p><strong>Air -</strong> This shows receivers that are capable of receiving aircraft communications in the VHF aircraft band</p>
+<p><strong>FM -</strong> This shows receivers that are capable of receiving standard FM radio stations (like in your car)</p>
+<p><strong>NOAA -</strong> This shows receivers that are capable of receiving weather broadcasts from the National Weather Service</p>
+<p><strong>2M HAM -</strong> This shows receivers that are capable of receiving the 2 Meter Ham Radio band.</p>
+<p><strong>Ext Ant -</strong> This shows receivers that have an input for an external antenna for better reception</p>
+<h5 id="portable-1">Portable</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Model</th>
+<th style="text-align:center">SSB</th>
+<th style="text-align:center">Air</th>
+<th style="text-align:center">FM</th>
+<th style="text-align:center">NOAA</th>
+<th style="text-align:center">2M HAM</th>
+<th style="text-align:center">Ext Ant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3PLwpsX" target="_blank"><strong>Tecsun PL990</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/PL990-Worldband-Shortwave-Longwave-Reception/dp/B08KL77Q4H?crid=1SHGKC27OMR97&keywords=Tecsun+PL-990X&qid=1696787821&sprefix=tecsun+pl-990x%2Caps%2C166&sr=8-2&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&linkCode=li3&tag=tc20f-20&linkId=690f95ab1acde2a985ca5fb83053a45e&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08KL77Q4H&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B08KL77Q4H" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/45CUEzL" target="_blank"><strong>Eton Elite Executive</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Eton-Executive-Aircraft-Shortwave-Leather/dp/B000NOSCN0?crid=2I7J4ISPHVX3P&keywords=Eton%2B-%2BElite%2BExecutive&qid=1696794342&sprefix=eton%2B-%2Belite%2Bexecutive%2Caps%2C187&sr=8-2&th=1&linkCode=li3&tag=tc20f-20&linkId=687943230fea43e59dff97245171e74d&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000NOSCN0&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B000NOSCN0" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3S8exeX" target="_blank"><strong>Tecsun PL880</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Tecsun-PL880-Conversion-Shortwave-Reception/dp/B00GJ51NVA?&linkCode=li3&tag=tc20f-20&linkId=13f63dbf96b32aa8d2ce977c039e5860&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00GJ51NVA&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B00GJ51NVA" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/45loWXp" target="_blank"><strong>Tecsun PL680</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/PL680-Portable-Digital-Conversion-Reception/dp/B00TOLUTDO?&linkCode=li3&tag=tc20f-20&linkId=97de3b828c70f5f81d15fdd2c3bd8d5f&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00TOLUTDO&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B00TOLUTDO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3tkLhah" target="_blank"><strong>CC Skywave SSB 2</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Shortwave-Scannable-Aviation-Operated-Portable/dp/B0CBW768RF?keywords=C.+Crane&qid=1696796882&sr=8-4&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&linkCode=li3&tag=tc20f-20&linkId=e3e1554431ca931c6ad83762c0a41933&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CBW768RF&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B0CBW768RF" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3F5cssm" target="_blank"><strong>CCRadio 3</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/C-Crane-Reception-Portable-Bluetooth/dp/B08SGKSQP6?keywords=C.+Crane&qid=1696796882&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=li3&tag=tc20f-20&linkId=fc68c9791754fc7dd22124b039fd1ed9&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08SGKSQP6&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B08SGKSQP6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3RQM4tY" target="_blank"><strong>Eton Elite Field</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Eton-Elite-Shortwave-Desktop-Bluetooth/dp/B07T6LK1X2?crid=32LCS1QP0WB2E&keywords=Eton%2B-%2BElite%2BField&qid=1696794567&s=electronics&sprefix=eton%2B-%2Belite%2Bfield%2Celectronics%2C159&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=li3&tag=tc20f-20&linkId=11888704d6671cbb72310a012b0e7c08&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07T6LK1X2&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B07T6LK1X2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3PJ8Ot7" target="_blank"><strong>Tecsun PL330</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Tecsun-Digital-PL330-Worldband-Receiver/dp/B0921HN6QM?&linkCode=li3&tag=tc20f-20&linkId=d75dc513dadc44048d083712219ae77a&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0921HN6QM&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B0921HN6QM" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+</tbody>
+</table>
+<h5 id="sdr-based">SDR Based</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Model</th>
+<th style="text-align:center">SSB</th>
+<th style="text-align:center">Air</th>
+<th style="text-align:center">FM</th>
+<th style="text-align:center">NOAA</th>
+<th style="text-align:center">Ext Ant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3rHfgJ0" target="_blank"><strong>ATS-25max-Decoder</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/ATS-25max-DECODER-Receiver-Decoding-Function-Spectrum/dp/B09GXM2196?keywords=ATS25%2BMAX&qid=1696792590&sr=8-6&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&th=1&linkCode=li3&tag=tc20f-20&linkId=6d91add7f939918bb9364b03f0766f0c&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09GXM2196&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B09GXM2196" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3ZQfp9Q" target="_blank"><strong>ATS-120</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/OZAPZ-ATS120-Full-Band-Display-Fidelity/dp/B0CDRRRKN1?crid=3D7T4XZDLG1K0&keywords=ATS120&qid=1696796080&s=electronics&sprefix=ats120%2Celectronics%2C130&sr=1-2&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&linkCode=li3&tag=tc20f-20&linkId=ac5b682b77b221d8a1d3d631f9b8f38c&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CDRRRKN1&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B0CDRRRKN1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3Q5PmYT" target="_blank"><strong>ATS-100</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/GOOZEEZOO-Shortwave-150K-108MHz-64M-108MHz-Rechargeable/dp/B0BPBXB1G4?crid=1NNMCDLB2YT8Y&keywords=ATS100&qid=1696796273&s=electronics&sprefix=ats100%2Celectronics%2C122&sr=1-1&ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840&linkCode=li3&tag=tc20f-20&linkId=39f0b1cc808104f21e9d8b8ad2763a0c&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BPBXB1G4&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B0BPBXB1G4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+</tbody>
+</table>
+<h5 id="basedesktop">Base/Desktop</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Model</th>
+<th style="text-align:center">SSB</th>
+<th style="text-align:center">Air</th>
+<th style="text-align:center">FM</th>
+<th style="text-align:center">NOAA</th>
+<th style="text-align:center">Ext Ant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/46IKu15" target="_blank"><strong>Eton Elite 750</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Shortwave-Rotating-Channels-Commitment-Preparedness/dp/B08BVSCY8G?pd_rd_w=HuvLv&content-id=amzn1.sym.f5690a4d-f2bb-45d9-9d1b-736fee412437&pf_rd_p=f5690a4d-f2bb-45d9-9d1b-736fee412437&pf_rd_r=TNGXQ94B3EJGW7JCY9NS&pd_rd_wg=txMbU&pd_rd_r=fda413af-302a-41eb-8083-b64641b2a423&pd_rd_i=B0C41SYCS9&th=1&linkCode=li3&tag=tc20f-20&linkId=fed5212db788c9c544b19320e30ca7d3&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08BVSCY8G&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B08BVSCY8G" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+</tbody>
+</table>
+
             <footer class="footline">
 
             </footer>
@@ -1487,15 +1999,15 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
       <div id="content-wrapper" class="highlightable">
         <div id="topics">
           <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/sigint/index.html" class="parent "><input type="checkbox" id="section-3c613d402a754db4ca7319908fa20dc2" aria-controls="subsections-3c613d402a754db4ca7319908fa20dc2" checked><label for="section-3c613d402a754db4ca7319908fa20dc2"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu SIGINT</span></label><a class="padding" href="/sigint/index.html">SIGINT</a><ul id="subsections-3c613d402a754db4ca7319908fa20dc2" class="morespace collapsible-menu">
-          <li data-nav-id="/sigint/flighttracking/index.html" class="parent alwaysopen"><input type="checkbox" id="section-0bdb0e0036e18c0d8f07ac9bae8f327f" aria-controls="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" checked><label for="section-0bdb0e0036e18c0d8f07ac9bae8f327f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Aircraft Monitoring</span></label><a class="padding" href="/sigint/flighttracking/index.html">Aircraft Monitoring</a><ul id="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" class="morespace collapsible-menu">
-          <li data-nav-id="/sigint/flighttracking/changing_sdr_serials/index.html" class="active"><a class="padding" href="/sigint/flighttracking/changing_sdr_serials/index.html">Changing SDR Serials</a></li>
+          <li data-nav-id="/sigint/index.html" class=""><input type="checkbox" id="section-3c613d402a754db4ca7319908fa20dc2" aria-controls="subsections-3c613d402a754db4ca7319908fa20dc2"><label for="section-3c613d402a754db4ca7319908fa20dc2"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu SIGINT</span></label><a class="padding" href="/sigint/index.html">SIGINT</a><ul id="subsections-3c613d402a754db4ca7319908fa20dc2" class="morespace collapsible-menu">
+          <li data-nav-id="/sigint/flighttracking/index.html" class="alwaysopen"><input type="checkbox" id="section-0bdb0e0036e18c0d8f07ac9bae8f327f" aria-controls="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" checked><label for="section-0bdb0e0036e18c0d8f07ac9bae8f327f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Aircraft Monitoring</span></label><a class="padding" href="/sigint/flighttracking/index.html">Aircraft Monitoring</a><ul id="subsections-0bdb0e0036e18c0d8f07ac9bae8f327f" class="morespace collapsible-menu">
+          <li data-nav-id="/sigint/flighttracking/changing_sdr_serials/index.html" class=""><a class="padding" href="/sigint/flighttracking/changing_sdr_serials/index.html">Changing SDR Serials</a></li>
           <li data-nav-id="/sigint/flighttracking/nooelec-sawbird-adsb/index.html" class=""><a class="padding" href="/sigint/flighttracking/nooelec-sawbird-adsb/index.html">Nooelec SAWbird ADSB</a></li>
           <li data-nav-id="/sigint/flighttracking/skywatch/index.html" class=""><a class="padding" href="/sigint/flighttracking/skywatch/index.html">Skywatch</a></li></ul></li></ul></li>
           <li data-nav-id="/lora/index.html" class=""><input type="checkbox" id="section-689b2cce35f492f00bd64574e5115248" aria-controls="subsections-689b2cce35f492f00bd64574e5115248"><label for="section-689b2cce35f492f00bd64574e5115248"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu LoRa</span></label><a class="padding" href="/lora/index.html">LoRa</a><ul id="subsections-689b2cce35f492f00bd64574e5115248" class="morespace collapsible-menu">
           <li data-nav-id="/lora/solar-meshtastic-encrypted-comms-device-pt1/index.html" class=""><a class="padding" href="/lora/solar-meshtastic-encrypted-comms-device-pt1/index.html">DIY Solar Meshtastic Encrypted Comms Device (Part 1)</a></li></ul></li>
-          <li data-nav-id="/radio101/index.html" class=""><input type="checkbox" id="section-0b8bd1d3525c30cb645620e1f142753c" aria-controls="subsections-0b8bd1d3525c30cb645620e1f142753c"><label for="section-0b8bd1d3525c30cb645620e1f142753c"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Radio 101</span></label><a class="padding" href="/radio101/index.html">Radio 101</a><ul id="subsections-0b8bd1d3525c30cb645620e1f142753c" class="morespace collapsible-menu">
-          <li data-nav-id="/radio101/radio101-receivers/index.html" class=""><a class="padding" href="/radio101/radio101-receivers/index.html">Receivers</a></li></ul></li>
+          <li data-nav-id="/radio101/index.html" class="parent "><input type="checkbox" id="section-0b8bd1d3525c30cb645620e1f142753c" aria-controls="subsections-0b8bd1d3525c30cb645620e1f142753c" checked><label for="section-0b8bd1d3525c30cb645620e1f142753c"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Radio 101</span></label><a class="padding" href="/radio101/index.html">Radio 101</a><ul id="subsections-0b8bd1d3525c30cb645620e1f142753c" class="morespace collapsible-menu">
+          <li data-nav-id="/radio101/radio101-receivers/index.html" class="active"><a class="padding" href="/radio101/radio101-receivers/index.html">Receivers</a></li></ul></li>
           <li data-nav-id="/hamradio/index.html" class=""><input type="checkbox" id="section-5ace9b679e8e7e0c5f4d90ff6c24a207" aria-controls="subsections-5ace9b679e8e7e0c5f4d90ff6c24a207"><label for="section-5ace9b679e8e7e0c5f4d90ff6c24a207"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Ham Radio</span></label><a class="padding" href="/hamradio/index.html">Ham Radio</a><ul id="subsections-5ace9b679e8e7e0c5f4d90ff6c24a207" class="morespace collapsible-menu">
           <li data-nav-id="/hamradio/packet_radio/index.html" class="alwaysopen"><input type="checkbox" id="section-323fc01069f504e93751d3e5e44f0937" aria-controls="subsections-323fc01069f504e93751d3e5e44f0937" checked><label for="section-323fc01069f504e93751d3e5e44f0937"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Packet Radio &amp; APRS</span></label><a class="padding" href="/hamradio/packet_radio/index.html">Packet Radio &amp; APRS</a><ul id="subsections-323fc01069f504e93751d3e5e44f0937" class="morespace collapsible-menu">
           <li data-nav-id="/hamradio/packet_radio/building_digipeater/index.html" class=""><a class="padding" href="/hamradio/packet_radio/building_digipeater/index.html">Building your own Digipeater with Le Potato or Raspberry Pi</a></li>
