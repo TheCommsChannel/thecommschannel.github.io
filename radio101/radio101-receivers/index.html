@@ -19,20 +19,20 @@ if (!doNotTrack) {
     <meta name="generator" content="Relearn 5.21.0+tip">
     <meta name="description" content="">
     <title>Receivers :: TheCommsChannel</title>
-    <link href="/images/favicon.png?1696801603" rel="icon" type="image/png">
+    <link href="/images/favicon.png?1697040858" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1696801603" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1696801603" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1696801603" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696801603" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1696801603" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1696801603" rel="stylesheet">
-    <link href="/css/fonts.css?1696801603" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1696801603" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1696801603" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1696801603" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1696801603" rel="stylesheet">
-    <link href="/css/print.css?1696801603" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1696801603" rel="stylesheet">
-    <script src="/js/url.js?1696801603"></script>
-    <script src="/js/variant.js?1696801603"></script>
+    <link href="/css/fontawesome-all.min.css?1697040858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1697040858" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1697040858" rel="stylesheet">
+    <link href="/css/auto-complete.css?1697040858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1697040858" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1697040858" rel="stylesheet">
+    <link href="/css/fonts.css?1697040858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1697040858" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1697040858" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1697040858" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1697040858" rel="stylesheet">
+    <link href="/css/print.css?1697040858" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1697040858" rel="stylesheet">
+    <script src="/js/url.js?1697040858"></script>
+    <script src="/js/variant.js?1697040858"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -663,6 +663,90 @@ if (!doNotTrack) {
 <td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="sdr-software-defined-radio">SDR (Software Defined Radio)</h4>
+<p><strong>Column explanations</strong>:</p>
+<p><strong>Range(MHz) -</strong> This will show the frequency range of the SDR. This is based on the manufacturer&rsquo;s listed specifications which can be approxomate in same cases.</p>
+<p><strong>Bandwidth -</strong> This shows how big of a chunk of the radio spectrum the SDR is capable of displaying</p>
+<p><strong>Bias Tee -</strong> This shows SDRs with a Bias Tee. A Bias Tee allows you to power an LNA (Low Noise Amplifier) from the SDR itself</p>
+<p><strong>ADS-B/UAT -</strong> This shows SDRs focused on ADS-B or UAT which is used for aircraft tracking. Please note that these sometimes have built-in filters to filter out any noise outside of the ADS-B and UAT bands, thus making them not suitable for use other than plane tracking. Only get these if plane tracking is your only goal.</p>
+<p><strong>TX -</strong> There are some SDRs that are capable of transmitting and wanted to include them here. These are usually fairly low power however</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Model</th>
+<th style="text-align:center">Range(MHz)</th>
+<th style="text-align:center">Bandwidth</th>
+<th style="text-align:center">Bias Tee</th>
+<th style="text-align:center">ADS-B/UAT</th>
+<th style="text-align:center">TX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3ZS1eB1Q" target="_blank"><strong>HackRF One</strong></a> <!-- raw HTML omitted --> <a href="https://www.amazon.com/Software-Receiving-1MHz-6GHz-Frequency-Bandwidth/dp/B0BL3ZZCJ7?crid=186RPAP1WQN2J&keywords=HackRF&qid=1697036230&sprefix=hackrf%2Caps%2C84&sr=8-4&ufe=app_do%3Aamzn1.fos.ac2169a1-b668-44b9-8bd0-5ec63b24bcb5&linkCode=li3&tag=tc20f-20&linkId=03221b9f29ff4ee34d305c6ba10d5458&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BL3ZZCJ7&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B0BL3ZZCJ7" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">1-6000</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">20MHz</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3LYnaom" target="_blank"><strong>NooElec NESDR Smart XTR</strong></a> <!-- raw HTML omitted --> <a href="https://www.amazon.com/NooElec-NESDR-Smart-XTR-SDR/dp/B06Y1HKLHY?content-id=amzn1.sym.e0e55f1a-1cd9-448d-9cd8-1206bec97ce2%3Aamzn1.sym.e0e55f1a-1cd9-448d-9cd8-1206bec97ce2&crid=2ALZRAK7BQ2TW&cv_ct_cx=RTLsdr&keywords=RTLsdr&pd_rd_i=B06Y1HKLHY&pd_rd_r=6c679860-acb7-4f5e-bc5b-7dd55fefda7f&pd_rd_w=Y4EIz&pd_rd_wg=bhCuE&pf_rd_p=e0e55f1a-1cd9-448d-9cd8-1206bec97ce2&pf_rd_r=EQHX2BGVWYDZZ29J2WWY&qid=1697037833&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=rtlsdr%2Caps%2C87&sr=1-2-2b34d040-5c83-4b7f-ba01-15975dfb8828-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1&linkCode=li3&tag=tc20f-20&linkId=b525e6e679ec8cf42f133b2069a4eea0&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06Y1HKLHY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B06Y1HKLHY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">55-2300</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">2.4MHz</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3Qd71he" target="_blank"><strong>NESDR SMArTee v2</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/NooElec-NESDR-SMArTee-SDR-R820T2-Based/dp/B079C3FHPG?&linkCode=li3&tag=tc20f-20&linkId=876cb403fe88eea42d32819dfdef3858&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B079C3FHPG&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B079C3FHPG" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">25-1750</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">2.4MHz</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/46nLtEn" target="_blank"><strong>RTL-SDR Blog V3</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/RTL-SDR-Blog-RTL2832U-Software-Defined/dp/B0BMKZCKTF?crid=1A7PJGHQ2CH7N&keywords=rtl%2Bsdr%2Bv4&qid=1697036948&sprefix=RTL%2Caps%2C120&sr=8-5&th=1&linkCode=li3&tag=tc20f-20&linkId=67d23460ee7df68d8f93b4e73ff6a2c4&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BMKZCKTF&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B0BMKZCKTF" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">0.5-1700</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">2.4MHz</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/46nRbWP" target="_blank"><strong>Nooelec NESDR SMArt v5</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/Nooelec-RTL-SDR-SDR-100kHz-1-75GHz-Enclosure/dp/B01HA642SW?&linkCode=li3&tag=tc20f-20&linkId=0a53233fc375be4aa8fa4018a0a86993&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01HA642SW&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B01HA642SW" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">0.1-1750</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">2.4MHz</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3FbAGB1" target="_blank"><strong>RadarBox ADS-B</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/AirNav-RadarBox-FlightStick-Advanced-Receiver/dp/B07K47P7XD?crid=8NKKLXES97OK&keywords=flightaware&qid=1697039815&sprefix=flightaware%2Caps%2C76&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=li3&tag=tc20f-20&linkId=f6ea894ec9014634d12584c03011b542&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07K47P7XD&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B07K47P7XD" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">N/A</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">2.4MHz</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://amzn.to/3rLCe1B" target="_blank"><strong>RadarBox UAT</strong></a><!-- raw HTML omitted --> <a href="https://www.amazon.com/AirNav-RadarBox-FlightStick-UAT-Integrated/dp/B083JJG4LC?crid=8NKKLXES97OK&keywords=flightaware&qid=1697040252&sprefix=flightaware%2Caps%2C76&sr=8-9&linkCode=li3&tag=tc20f-20&linkId=b45be4f3fd6f6baeff57acb76cc6287a&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B083JJG4LC&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tc20f-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tc20f-20&language=en_US&l=li3&o=1&a=B083JJG4LC" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-exchange-alt"></i></span><span class="badge-content" style="background-color: gray;">N/A</span></span></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-wave-square"></i></span><span class="badge-content" style="background-color: blue;">2.4MHz</span></span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fas fa-check"></i></span><span class="badge-content" style="background-color: green;">Yes</span></span></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2077,8 +2161,8 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1696801603" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1696801603" defer></script>
-    <script src="/js/theme.js?1696801603" defer></script>
+    <script src="/js/clipboard.min.js?1697040858" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1697040858" defer></script>
+    <script src="/js/theme.js?1697040858" defer></script>
   </body>
 </html>

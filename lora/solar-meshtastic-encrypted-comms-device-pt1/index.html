@@ -19,20 +19,20 @@ if (!doNotTrack) {
     <meta name="generator" content="Relearn 5.21.0+tip">
     <meta name="description" content="">
     <title>DIY Solar Meshtastic Encrypted Comms Device (Part 1) :: TheCommsChannel</title>
-    <link href="/images/favicon.png?1696801603" rel="icon" type="image/png">
+    <link href="/images/favicon.png?1697040858" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1696801603" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1696801603" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1696801603" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696801603" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1696801603" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1696801603" rel="stylesheet">
-    <link href="/css/fonts.css?1696801603" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1696801603" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1696801603" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1696801603" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1696801603" rel="stylesheet">
-    <link href="/css/print.css?1696801603" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1696801603" rel="stylesheet">
-    <script src="/js/url.js?1696801603"></script>
-    <script src="/js/variant.js?1696801603"></script>
+    <link href="/css/fontawesome-all.min.css?1697040858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1697040858" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1697040858" rel="stylesheet">
+    <link href="/css/auto-complete.css?1697040858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1697040858" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1697040858" rel="stylesheet">
+    <link href="/css/fonts.css?1697040858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1697040858" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1697040858" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1697040858" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1697040858" rel="stylesheet">
+    <link href="/css/print.css?1697040858" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1697040858" rel="stylesheet">
+    <script src="/js/url.js?1697040858"></script>
+    <script src="/js/variant.js?1697040858"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -157,11 +157,11 @@ if (!doNotTrack) {
 <p>As mentioned earlier, LoRa, which stands for Long Range, is a proprietary radio technology that uses Chirp Spread Spectrum. It&rsquo;s ideal for systems with low power consumption that do not need high data rates. Due to the bandwidth limits of LoRa, you will typically only see text based communications from these systems so sending things like images isn&rsquo;t feasible using this technology. Where LoRa and CSS make up for this is in its ability to detect signals well beneath the noise floor, thus making it able to communicate further than other radio technologies.</p>
 <h4 id="a-look-at-a-lora-signal">A look at a LoRa signal</h4>
 <p>In the screenshot below, we can see a view of a LoRa signal captured using an SDR and a program called SDR Console. Looking at the waterfall, we can clearly see the Chirps from the Chirp Spread Spectrum pulses used by LoRa. CSS uses a series of up-chirps as a preamble to let the receiving radios know there&rsquo;s an incoming message. This will be followed by two down-chirps for syncing and then a series of different broken up-chirps that represent specific symbols for the sending of data.</p>
-<p><a href="#image-e2e3d6318100ad846ebe11f23c23cd2b" class="lightbox-link"><img src="/images/LoRa-Signal.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-e2e3d6318100ad846ebe11f23c23cd2b"><img src="/images/LoRa-Signal.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-b49d07acd7a8c3357b14cab59d79519c" class="lightbox-link"><img src="/images/LoRa-Signal.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-b49d07acd7a8c3357b14cab59d79519c"><img src="/images/LoRa-Signal.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <p>In this next image, we&rsquo;ll take a zoomed in view into the chirps and highlight the different sections of the signal to show an example of the preamble, sync, and data portions of the signal.</p>
-<p><a href="#image-11174c648e83f6dec0486e593dc9a83e" class="lightbox-link"><img src="/images/LoRa-Chirps.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="image-11174c648e83f6dec0486e593dc9a83e"><img src="/images/LoRa-Chirps.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#image-5440f082349d7b2763ca953edae0aad7" class="lightbox-link"><img src="/images/LoRa-Chirps.png" alt=" " class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="image-5440f082349d7b2763ca953edae0aad7"><img src="/images/LoRa-Chirps.png" alt=" " class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <h3 id="why-meshtastic">Why Meshtastic?</h3>
 <p>There are a number of uses for Meshtastic, but here are some key reasons why one might choose to use Meshtastic for off-grid and emergency communications:</p>
 <ol>
@@ -1588,8 +1588,8 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1696801603" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1696801603" defer></script>
-    <script src="/js/theme.js?1696801603" defer></script>
+    <script src="/js/clipboard.min.js?1697040858" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1697040858" defer></script>
+    <script src="/js/theme.js?1697040858" defer></script>
   </body>
 </html>
