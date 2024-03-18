@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TheCommsChannel</title>
+    <title>Meshtastic on TheCommsChannel</title>
     <link>https://www.thecommschannel.com/meshtastic/index.html</link>
-    <description>Recent content on TheCommsChannel</description>
+    <description>Recent content in Meshtastic on TheCommsChannel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://www.thecommschannel.com/meshtastic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parts Lists &amp; Recommended Parts</title>
+      <link>https://www.thecommschannel.com/meshtastic/parts/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.thecommschannel.com/meshtastic/parts/index.html</guid>
+      <description>Parts Lists &amp;amp; Recommended Parts This section contains parts lists for various builds I&amp;rsquo;ve done. Due to the popularity of Meshtastic, some parts may be hard to find and I may include alternative options or multiple links to the same product in case the first link is out of stock. This section also includes recommended parts. Some have been tested by me and some by others in the community. When purchasing radio related parts, be sure to select the correct freqency option for your location.</description>
+    </item>
   </channel>
 </rss>
