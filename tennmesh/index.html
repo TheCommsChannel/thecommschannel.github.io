@@ -20,20 +20,20 @@ if (!doNotTrack) {
     <meta name="description" content="">
     <title>TennMesh :: TheCommsChannel</title>
     <link href="/tennmesh/index.xml" rel="alternate" type="application/rss+xml" title="TennMesh :: TheCommsChannel">
-    <link href="/images/favicon.png?1722458132" rel="icon" type="image/png">
+    <link href="/images/favicon.png?1771076235" rel="icon" type="image/png">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1722458132" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1722458132" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1722458132" rel="stylesheet">
-    <link href="/css/auto-complete.css?1722458132" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1722458132" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1722458132" rel="stylesheet">
-    <link href="/css/fonts.css?1722458132" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1722458132" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1722458132" rel="stylesheet">
-    <link href="/css/theme-relearn-dark.css?1722458132" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1722458132" rel="stylesheet">
-    <link href="/css/print.css?1722458132" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1722458132" rel="stylesheet">
-    <script src="/js/url.js?1722458132"></script>
-    <script src="/js/variant.js?1722458132"></script>
+    <link href="/css/fontawesome-all.min.css?1771076235" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1771076235" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1771076235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1771076235" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1771076235" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1771076235" rel="stylesheet">
+    <link href="/css/fonts.css?1771076235" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1771076235" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1771076235" rel="stylesheet">
+    <link href="/css/theme-relearn-dark.css?1771076235" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1771076235" rel="stylesheet">
+    <link href="/css/print.css?1771076235" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1771076235" rel="stylesheet">
+    <script src="/js/url.js?1771076235"></script>
+    <script src="/js/variant.js?1771076235"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -70,12 +70,7 @@ if (!doNotTrack) {
               <div class="topbar-content">
                 <div class="topbar-content-wrapper"><nav class="TableOfContents">
   <ul>
-    <li><a href="#tennmesh---east-tennessee-mesh-network">TennMesh - East Tennessee Mesh Network</a>
-      <ul>
-        <li><a href="#device-role-settings">Device Role Settings</a></li>
-        <li><a href="#hop-limitnumber-of-hops">Hop Limit/Number of Hops</a></li>
-      </ul>
-    </li>
+    <li><a href="#tennmesh---tennessee-mesh-network">TennMesh - Tennessee Mesh Network</a></li>
   </ul>
 </nav>
                 </div>
@@ -120,45 +115,14 @@ if (!doNotTrack) {
             </header>
 <h1 id="tennmesh">TennMesh</h1>
 
-<h2 id="tennmesh---east-tennessee-mesh-network">TennMesh - East Tennessee Mesh Network</h2>
-<p>Welcome to the TennMesh Meshtastic Network page, serving the East Tennessee area! Here, you&rsquo;ll find essential guidelines to ensure our mesh network operates at peak performance. For the most efficient operation, please follow the guidelines listed below.</p>
-<h3 id="device-role-settings">Device Role Settings</h3>
-<p>The device role setting determines how your node functions within the network and should be configured to suit your specific situation. Generally, the best settings are CLIENT or CLIENT_MUTE. The ROUTER, ROUTER_CLIENT, and REPEATER roles have been abused and are causing issues for many networks, including ours. These roles should only be used for nodes in areas with excellent coverage, such as mountaintop towers.</p>
-<p>If you believe your node&rsquo;s location warrants a ROUTER or REPEATER role, please contact us through our Discord server at <a href="https://discord.gg/XGhftQw9Mt" target="_blank">https://discord.gg/XGhftQw9Mt</a> or email <a href="mailto:thecommschannel@proton.me">thecommschannel@proton.me</a></p>
-<blockquote>
-<p>Any nodes that are set as ROUTER or REPEATER that we don&rsquo;t receive a response from or are uncooperative will be added to the ignore list on all infrastructure nodes</p>
-</blockquote>
-<p><strong>Appropriate Device Role Scenarios</strong></p>
-<table>
-<thead>
-<tr>
-<th>Role</th>
-<th>Scenarios</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CLIENT</td>
-<td>Node on the roof of your house,<!-- raw HTML omitted -->  Node on a tower you have at your house,<!-- raw HTML omitted -->  Node on a tower that only covers your town</td>
-</tr>
-<tr>
-<td>CLIENT_MUTE</td>
-<td>Mobile Node,<!-- raw HTML omitted -->  Indoor node,<!-- raw HTML omitted -->  Node that is generally not in a good location</td>
-</tr>
-<tr>
-<td>ROUTER,<!-- raw HTML omitted -->  ROUTER_CLIENT,<!-- raw HTML omitted -->  REPEATER</td>
-<td>Infrastructure Node on a tower on top of a mountain,<!-- raw HTML omitted -->  Nodes at high elevation capable of covering multiple counties</td>
-</tr>
-</tbody>
-</table>
-<p>You can reach these settings by following the steps below to reach the menu:<br>
-<strong>Android:</strong> 3 dots on the top right &gt; Radio Configuration &gt; Device &gt; Role<br>
-<strong>Apple:</strong> Settings &gt; Device &gt; Device Role</p>
-<h3 id="hop-limitnumber-of-hops">Hop Limit/Number of Hops</h3>
-<p>Please keep the Hop Count at the minimum amount required to reach the infrastructure node closest to you. Start with 3 or 4 and work your way down to the minimum required to reach the infrastructure node closest to you. High hop counts create congestion on the network so please avoid having a hop count over 4 or 5.</p>
-<p>You can reach these settings by following the steps below to reach the menu:<br>
-<strong>Android:</strong> 3 dots on the top right &gt; Radio Configuration &gt; LoRa &gt; Hop Limit<br>
-<strong>Apple:</strong> Settings &gt; LoRa &gt; Number of hops</p>
+<h2 id="tennmesh---tennessee-mesh-network">TennMesh - Tennessee Mesh Network</h2>
+<p>Welcome to the TennMesh Mesh Network page, serving Tennessee! We&rsquo;ve recently switched from Meshtastic to MeshCore and seeing better results with it. More info on why we switched can be found a in the video below. We also have a new website dedicated to TennMesh which can be found at <a href="https://tennmesh.com" target="_blank">TennMesh.com</a></p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/8WJJkPfI6s-A2Lwm" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>We hope to see you on our MeshCore network soon! Tutorials and more info can be found on our <a href="https://www.youtube.com/playlist?list=PLshzThxhw4O4WU_iZo3NmNZOv6KMrUuF9" target="_blank">MeshCore Playlist</a></p>
 
             <footer class="footline">
 
@@ -1574,8 +1538,8 @@ TkSuQmCC" transform="matrix(0.24 0 0 0.24 0 0)">
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1722458132" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1722458132" defer></script>
-    <script src="/js/theme.js?1722458132" defer></script>
+    <script src="/js/clipboard.min.js?1771076235" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1771076235" defer></script>
+    <script src="/js/theme.js?1771076235" defer></script>
   </body>
 </html>

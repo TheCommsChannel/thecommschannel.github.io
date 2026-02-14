@@ -46,8 +46,8 @@ In this section of the website you will find information related to Meshtastic s
       <link>https://www.thecommschannel.com/tennmesh/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.thecommschannel.com/tennmesh/index.html</guid>
-      <description>TennMesh - East Tennessee Mesh Network Welcome to the TennMesh Meshtastic Network page, serving the East Tennessee area! Here, you&amp;rsquo;ll find essential guidelines to ensure our mesh network operates at peak performance. For the most efficient operation, please follow the guidelines listed below.
-Device Role Settings The device role setting determines how your node functions within the network and should be configured to suit your specific situation. Generally, the best settings are CLIENT or CLIENT_MUTE.</description>
+      <description>TennMesh - Tennessee Mesh Network Welcome to the TennMesh Mesh Network page, serving Tennessee! We&amp;rsquo;ve recently switched from Meshtastic to MeshCore and seeing better results with it. More info on why we switched can be found a in the video below. We also have a new website dedicated to TennMesh which can be found at TennMesh.com
+We hope to see you on our MeshCore network soon! Tutorials and more info can be found on our MeshCore Playlist</description>
     </item>
     <item>
       <title>Ham Radio</title>
